@@ -4,21 +4,17 @@ import { graphql } from 'gatsby';
 import PropTypes from 'prop-types';
 import Layout from '../components/Layout/layout';
 
-// import '../css/blog-post.css'; // make it pretty!
-
 export default function Template({ data }) {
-  const { markdownRemark: post } = data; // data.markdownRemark holds the blog post data
+  // data.markdownRemark holds the blog post data
+  const { markdownRemark: post } = data;
 
   return (
     <Layout>
-      <div className="blog-post-container">
+      <div>
         <Helmet title={`${post.frontmatter.title}`} />
-        <div className="blog-post">
+        <div>
           <h1>{post.frontmatter.title}</h1>
-          <div
-            className="blog-post-content"
-            dangerouslySetInnerHTML={{ __html: post.html }}
-          />
+          <div dangerouslySetInnerHTML={{ __html: post.html }} />
         </div>
       </div>
     </Layout>
