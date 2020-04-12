@@ -4,21 +4,10 @@
  * See: https://www.gatsbyjs.org/docs/node-apis/
  */
 
-// You can delete this file if you're not using it
+const path = require('path');
 
-/**
- * Visit:
- *  https://github.com/gatsbyjs/gatsby/issues/10531
- *  https://stackoverflow.com/questions/45854169/how-can-i-use-an-es6-import-in-node
- * to see discussion on creation on gatsby-node.mjs and Node's limitation for parsing ES6
- */
-
-import { resolve } from 'path';
-
-export default async function createPages({ actions, graphql }) {
+exports.createPages = async ({ actions, graphql }) => {
   const { createPage } = actions;
-
-  const blogPostTemplate = resolve('src/templates/blog-post.jsx');
 
   const result = await graphql(`
     {
@@ -45,8 +34,8 @@ export default async function createPages({ actions, graphql }) {
   result.data.allMarkdownRemark.edges.forEach(({ node }) => {
     createPage({
       path: node.frontmatter.path,
-      component: blogPostTemplate,
+      component: path.resolve('./src/templates/blog-post.jsx'),
       context: {}, // Additional data can be passed via context
     });
   });
-}
+};
