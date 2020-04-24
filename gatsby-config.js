@@ -6,6 +6,7 @@ module.exports = {
     author: 'Johan Oakes',
   },
   plugins: [
+    'gatsby-plugin-aphrodite',
     'gatsby-plugin-catch-links',
     'gatsby-plugin-react-helmet',
     {
