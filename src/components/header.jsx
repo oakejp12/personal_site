@@ -1,7 +1,8 @@
 import PropTypes from 'prop-types';
 import React from 'react';
 import { StyleSheet, css } from 'aphrodite';
-import { useStaticQuery, graphql, Link } from 'gatsby';
+import { Link } from 'gatsby';
+import tw from 'twin.macro';
 
 /*
  * Visit https://www.gatsbyjs.org/docs/static-query/#how-staticquery-differs-from-page-query
@@ -10,14 +11,10 @@ import { useStaticQuery, graphql, Link } from 'gatsby';
  */
 
 const styles = StyleSheet.create({
-  header__mb: {
-    marginBottom: '1.45em',
-  },
-  div: {
-    margin: '0 auto',
-    maxWidth: 960,
-    padding: '1.45rem 1.0875rem',
-  },
+  header__mb: tw`mb-6`,
+  div: tw`mx-auto my-0 max-w-screen-lg py-8 px-4`,
+  nav__item: tw`inline-block mr-4`,
+  nav__list: tw`list-none float-right`,
   link__text: {
     textDecoration: 'none',
     color: 'hsl(220.7,26.4%,20.8%)',
@@ -27,14 +24,6 @@ const styles = StyleSheet.create({
       textDecorationStyle: 'double',
       textDecorationColor: 'hsl(227.6,15.2%,62.5%)',
     },
-  },
-  nav__item: {
-    display: 'inline-block',
-    marginRight: '1rem',
-  },
-  nav__list: {
-    listStyle: 'none',
-    float: 'right',
   },
 });
 
@@ -69,41 +58,22 @@ ExternalLink.propTypes = {
   name: PropTypes.string.isRequired,
 };
 
-const Header = ({ data }) => (
-  <header className={css(styles.header__mb)}>
-    <div className={css(styles.div)}>
-      <InternalLink to="/">
-        <h3 style={{ display: 'inline' }}>{data.site.siteMetadata.title}</h3>
-      </InternalLink>
-      <ul className={css(styles.nav__list)}>
-        <InternalLink to="/blog">blog</InternalLink>
-        <ExternalLink to="https://github.com/oakejp12" name="github" />
-        <ExternalLink to="https://linkedin.com/in/johanoakes" name="linkedin" />
-      </ul>
-    </div>
-  </header>
-);
-
-export default () => {
-  const data = useStaticQuery(graphql`
-    query SiteTitleQuery {
-      site {
-        siteMetadata {
-          title
-        }
-      }
-    }
-  `);
-
-  return <Header data={data} />;
-};
-
-Header.propTypes = {
-  data: PropTypes.shape({
-    site: PropTypes.shape({
-      siteMetadata: PropTypes.shape({
-        title: PropTypes.string.isRequired,
-      }).isRequired,
-    }).isRequired,
-  }).isRequired,
-};
+export default function Header() {
+  return (
+    <header className={css(styles.header__mb)}>
+      <div className={css(styles.div)}>
+        <InternalLink to="/">
+          <h3 style={{ display: 'inline' }}>johan</h3>
+        </InternalLink>
+        <ul className={css(styles.nav__list)}>
+          <InternalLink to="/blog">blog</InternalLink>
+          <ExternalLink to="https://github.com/oakejp12" name="github" />
+          <ExternalLink
+            to="https://linkedin.com/in/johanoakes"
+            name="linkedin"
+          />
+        </ul>
+      </div>
+    </header>
+  );
+}
