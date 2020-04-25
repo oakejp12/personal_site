@@ -2,24 +2,24 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { Link, graphql } from 'gatsby';
 import { StyleSheet, css } from 'aphrodite';
+import tw from 'twin.macro';
 import Layout from '../components/Layout/layout';
 import SEO from '../components/seo';
 
 /* TODO: Add a table of contents using graphql --> pageQuery */
 
 const styles = StyleSheet.create({
+  post__container: tw`mb-16 pb-16 border-b border-gray-300`,
+  date__text: tw`text-gray-500 mb-4`,
   link__text: {
     textDecoration: 'none',
     color: 'hsl(220.7,26.4%,20.8%)',
     ':hover': {
-      color: 'hsl(37.6,67.7%,80.6%)',
-      textDecoration: 'underline',
+      color: 'hsl(9.6,94.1%,59.8%)',
+      textDecoration: 'none',
       textDecorationStyle: 'double',
       textDecorationColor: 'hsl(227.6,15.2%,62.5%)',
     },
-  },
-  date__text: {
-    color: '#bbb',
   },
 });
 
@@ -33,17 +33,14 @@ export default function Blog({ data }) {
         {posts
           .filter(post => post.node.frontmatter.title.length > 0)
           .map(({ node: post }) => (
-            <div key={post.id}>
+            <div className={css(styles.post__container)} key={post.id}>
+              <p className={css(styles.date__text)}>{post.frontmatter.date}</p>
               <h1>
                 <Link
                   className={css(styles.link__text)}
                   to={post.frontmatter.path}
                 >
                   {post.frontmatter.title}
-                  <span className={css(styles.date__text)}>
-                    {' '}
-                    — {post.frontmatter.date}
-                  </span>
                 </Link>
               </h1>
               <p>{post.excerpt}</p>
