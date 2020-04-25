@@ -2,6 +2,7 @@
 path: '/blog/08/06/2018/type-erasure'
 date: 2018-08-06T17:12:33.962Z
 title: 'Type Erasure in Java'
+tags: ['java']
 ---
 
 Type erasure in Java is a concept that has always eluded me.

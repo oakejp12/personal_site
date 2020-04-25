@@ -2,6 +2,7 @@
 path: '/blog/02/07/2019/composite-pattern'
 date: 2019-02-07T17:12:33.962Z
 title: 'Composing the Composite Pattern'
+tags: ['design patterns']
 ---
 
 This is [Part 2](https://oakejp12.blot.im/acting-in-proxy-a-dive-into-the-proxy-design-pattern) of a series concerning Design Patterns.

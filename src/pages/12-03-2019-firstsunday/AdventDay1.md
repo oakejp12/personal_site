@@ -2,6 +2,7 @@
 path: '/blog/12/03/2019/advent-day-1'
 date: 2019-12-03T17:12:33.962Z
 title: 'First Sunday of Advent'
+tags: ['java', 'processing', 'generative', 'art']
 ---
 
 Every year, in anticipation of Christmas, our church would commence the use an Advent calendar to countdown the days until the 25th of December. Apart from it's religious purpose, the Advent calendar would let me, a young boy, know when that special day would arrive. Now, instead of standing in rows of pews, confused, I want to mark those days with a piece of code, a show-and-tell, or a small discussion.

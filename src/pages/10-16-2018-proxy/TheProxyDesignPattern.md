@@ -2,6 +2,7 @@
 path: '/blog/10/16/2018/proxy'
 date: 2018-10-16T17:12:33.962Z
 title: 'Acting in Proxy'
+tags: ['design patterns']
 ---
 
 This is [Part 1]() of a series concerning Design Patterns.

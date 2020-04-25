@@ -2,6 +2,7 @@
 path: '/blog/04/10/2019/dynamic-programming'
 date: 2019-04-10T17:12:33.962Z
 title: "Bellman's Curse"
+tags: ['dynamic programming', 'dp', 'algorithms']
 ---
 
 Seconds after I wrote this title, as corny as it may be, I stumbled upon a Wikipedia subheading, [_Curse of dimensionality_](https://en.wikipedia.org/wiki/Curse_of_dimensionality). In order to divert graduate students early, and to prevent scaring my targeted demographic, we're not in that deep yet. There shall not be any cursed phenomena occuring here!

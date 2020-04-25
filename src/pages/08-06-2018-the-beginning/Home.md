@@ -2,6 +2,7 @@
 path: '/blog/08/06/2018/the-beginning'
 date: 2018-08-06T17:12:33.962Z
 title: 'The Beginning'
+tags: ['personal']
 ---
 
 This space has been empty for quite a while

@@ -2,6 +2,7 @@
 path: '/blog/12/04/2019/randomly-walking-normally'
 date: 2019-12-04T17:12:33.962Z
 title: 'Randomly Walking, Normally'
+tags: ['art', 'generative', 'processing']
 ---
 
 To celebrate the glorious third day of Advent, after playing hooky the second day (_ssshhh_), I wanted to tackle Nature of Code's assignment on [Gaussian distribution](https://en.m.wikipedia.org/wiki/Normal_distribution):
