@@ -27,3 +27,5 @@
     - https://medium.com/frontendshortcut/how-to-make-a-polaroid-photo-gallery-in-html-and-css-d68f5a306c84
 - [ ] Implement a Table of Contents for each post like https://paulstamatiou.com/building-a-windows-10-lightroom-photo-editing-pc
 - [ ] Remove Graphics repo and store images in site to remove link retrieval --> unnecessary
+- [ ] Implement 'Tag Searching'
+  - https://www.gatsbyjs.org/docs/adding-tags-and-categories-to-blog-posts/
