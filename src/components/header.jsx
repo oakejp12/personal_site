@@ -3,6 +3,7 @@ import React from 'react';
 import { StyleSheet, css } from 'aphrodite';
 import { Link } from 'gatsby';
 import tw from 'twin.macro';
+import InitialsSVG from './InitialsSVG';
 
 /*
  * Visit https://www.gatsbyjs.org/docs/static-query/#how-staticquery-differs-from-page-query
@@ -14,7 +15,7 @@ const styles = StyleSheet.create({
   header__mb: tw`mb-6`,
   div: tw`mx-auto my-0 max-w-screen-lg py-8 px-4`,
   nav__item: tw`inline-block mr-4`,
-  nav__list: tw`list-none float-right`,
+  nav__list: tw`list-none float-right pt-3`,
   link__text: {
     textDecoration: 'none',
     color: 'hsl(220.7,26.4%,20.8%)',
@@ -62,9 +63,9 @@ export default function Header() {
   return (
     <header className={css(styles.header__mb)}>
       <div className={css(styles.div)}>
-        <InternalLink to="/">
-          <h3 style={{ display: 'inline' }}>johan</h3>
-        </InternalLink>
+        <a className={css(styles.link__text)} href="/">
+          <InitialsSVG />
+        </a>
         <ul className={css(styles.nav__list)}>
           <InternalLink to="/blog">blog</InternalLink>
           <ExternalLink to="https://github.com/oakejp12" name="github" />
