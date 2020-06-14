@@ -63,7 +63,7 @@ export default function Header() {
   return (
     <header className={css(styles.header__mb)}>
       <div className={css(styles.div)}>
-        <a className={css(styles.link__text)} href="/">
+        <a href="/">
           <InitialsSVG />
         </a>
         <ul className={css(styles.nav__list)}>
