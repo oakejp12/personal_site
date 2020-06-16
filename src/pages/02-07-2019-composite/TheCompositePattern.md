@@ -6,9 +6,7 @@ tags: ['design patterns']
 ---
 
 
-This is Part 2 of a series concerning Design Patterns.
-
-In case you missed the previous articles in this series, you can find them over here:
+This is Part 2 of a series concerning Design Patterns. In case you missed the previous articles in this series, you can find them over here:
 - Part 1: [Acting in Proxy](https://johanoakes.com/blog/10/16/2018/proxy)
 
 ---
