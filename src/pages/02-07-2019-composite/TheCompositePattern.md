@@ -5,7 +5,13 @@ title: 'Composing the Composite Pattern'
 tags: ['design patterns']
 ---
 
-This is [Part 2](https://oakejp12.blot.im/acting-in-proxy-a-dive-into-the-proxy-design-pattern) of a series concerning Design Patterns.
+
+This is Part 2 of a series concerning Design Patterns.
+
+In case you missed the previous articles in this series, you can find them over here:
+- Part 1: [Acting in Proxy](https://johanoakes.com/blog/10/16/2018/proxy)
+
+---
 
 I first encountered the Composite pattern when learning about new design patterns in Coursera's [Design Patterns](https://www.coursera.org/learn/design-patterns/home/welcome) course, often confusing the pattern with the Decorator pattern. The Decorator pattern and the Composite pattern share common characteristics, and it is often hard not to confuse the two from each other with little background on what both patterns aim to achieve. It doesn't help that the two patterns complement each other in that using the Composite pattern leads to also using the Decorator pattern. Needless to say, I didn't pay much attention to both patterns bar from taking notes and praying that some of it sticks around when I'm developing.
 

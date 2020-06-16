@@ -5,7 +5,7 @@ title: 'Acting in Proxy'
 tags: ['design patterns']
 ---
 
-This is [Part 1]() of a series concerning Design Patterns.
+This is Part 1 of a series concerning Design Patterns.
 
 For the past month, I've been researching design patterns, and I promised myself that I would do more than scribbling down notes only to later shuffle them under my desk for 2022 me to find them...in disappointment. In the meantime, I've been trying to think of every clever way to present a more senior topic. Should I try to find examples of these design patterns throughout Github and present them through expertly written code? Probably so, but for the respect of time, I've saved that idea for later so I can flush out my first dissection of design patterns. For now, I'll present my findings in a clearer format so that I may represent the ideas scribbled down in my notes and link them to actual code.
 
