@@ -15,21 +15,20 @@ Hahahahaha. [Abort, Retry, Fail?](https://en.wikipedia.org/wiki/Abort,_Retry,_Fa
 
 My goal is to deliver a brief presentation of how I debug Java memory exceptions in my local environment. I am not going to scrutinize production-grade tools (e.g. [YourKit Java Profiler](https://www.yourkit.com/java/profiler/), New Relic, or [Java Flight Recorder](https://docs.oracle.com/javacomponents/jmc-5-4/jfr-runtime-guide/about.htm#JFRUH170)), though some tools may be used to fix production issues. Essentially, I want to provide some context around Java memory exceptions in terms of how I first encountered and had to debug a problem in my application, the routes explored and tools used to inspect and identify the memory exceptions, and suggestions for mitigating future issues. With any luck, the reader should get a glimpse and a curiosity for how memory works in Java and the tools available so that they'll be able to prevent memory exceptions or find and fix any memory leak errors that may occur.
 
-## Agenda: 
-- [Context](#Context)
-- [Identifying the Problem](#Identifying-the-Problem)
-  - [Questions to Ask](#Questions-to-Ask)
-  - [Hunting Down the Memory Leak](#Hunting-Down-the-Memory-Leak)
-- [Tools](#Tools)
-  - [VisualVM and Eclipse MAT](#VisualVM-and-Eclipse-MAT)
+## Table of Contents
+
+- [Context](#context)
+- [Identifying the Problem](#identifying-the-problem)
+  - [Questions to Ask](#questions-to-ask)
+  - [Hunting Down the Memory Leak](#hunting-down-the-memory-leak)
+- [Tools](#tools)
+  - [VisualVM and Eclipse MAT](#visualvm-and-eclipse-mat)
   - [gc-logs](#gc-logs)  
-- [To Be Continued](#To-Be-Continued)
-- [Resources](#Resources)
+- [To Be Continued](#to-be-continued)
+- [Resources](#resources)
+
 
 ## Context
-
-[comment]: <> (Add an explanation as to why Spring Boot backend was the only thing to be restarted. Why didn't the Kubernetes pod restart itself.)
-
 
 I won't go into the business purpose of the application, from here on out referred to as "KnowledgeDB", from which I had to debug memory exceptions due to legal reasons. Better safe than really, really sorry. However, KnowledgeDB is primarily a monolith backed by Spring Boot with a React frontend hosted on RHEL7 instances and supported by Kubernetes (*that was a mouthful*). Unfortunately, KnowledgeDB would come crashing down every couple months. Our team would wake up in the morning to a couple emails that our application's Spring Boot services were unresponsive. Luckily for us, our frontend was geared to display an error when data retrieval failed, so all our team had to do was restart the Kubernetes pod hosting our backend services. 
 
@@ -78,7 +77,7 @@ On the otherhand, if you see something like the graph below then you may have st
 
 If you encounter a graph like the one above, you've answered your first question: do I have a memory leak? So what now? One more tool you can add to your belt is the [Eclipse MAT (Memory Analyzer Tool)](https://www.eclipse.org/mat/). By generating a heap dump through Visual VM and loading the HPROF binary-formatted file to Eclipse MAT, you'll be able to investigate the heap, generate reports to check for leak suspects, and analyze objects for suspected memory issues. Tools like Eclipse MAT will be able to help you answer questions 2-4: which classes are leaking and where is it leaking from. 
 
-An alternative to generating heap dumps through Visual VM or another tool is to supply the *-XX:+HeapDumpOnOutOfMemoryError* VM flag when starting your application. This will automatically create a heap dump file when you get an OutOfMemory error. I'll go more into VM arguments below.
+An alternative to generating heap dumps through Visual VM or another tool is to supply the *-XX:+HeapDumpOnOutOfMemoryError* VM flag when starting your application. This will automatically create a heap dump file when you get an OutOfMemory error. I'll go more into VM arguments in Part II of this series.
 
 ### gc-logs
 
