@@ -1,8 +1,8 @@
 ---
-path: '/blog/11/25/2021/venting-java-optional'
-date: 2021-11-25
-title: 'Venting about Java's Optional'
-tags: ['optional', 'java', 'programming languages']
+path: '/blog/11/26/2021/java-optional-venting'
+date: 2021-11-26
+title: Venting about Java's Optional
+tags: ['optional', 'programming languages', 'java']
 ---
 
 After reading Matt's [tip for academic blogging](https://matt.might.net/articles/how-to-blog-as-an-academic/), I decided to hop on tip 4, _Vented steam as post_, and focus my concerns around the design of Java's Optional type and the capacity for misuse from junior/inexperienced Java engineers. A quick Google search for `Optional` misuse will render countless results. What many of these articles miss is an illustration of the common bad practices, so as a visual learner myself, I wanted to show in code what happens when you give a baby a knife. These are all examples I've seen used in production and introduced in merge requests by fairly intelligent CS graduates:
