@@ -3,6 +3,7 @@ import { Helmet } from 'react-helmet';
 import { graphql } from 'gatsby';
 import PropTypes from 'prop-types';
 import Layout from '../components/Layout/layout';
+import './blog-post.css';
 
 export default function Template({ data }) {
   // data.markdownRemark holds the blog post data

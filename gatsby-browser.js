@@ -6,5 +6,5 @@
 
 // You can delete this file if you're not using it
 
-import 'prismjs/themes/prism-tomorrow.css';
+import 'prismjs/themes/prism-coy.css';
 import 'tailwindcss/dist/base.css';
