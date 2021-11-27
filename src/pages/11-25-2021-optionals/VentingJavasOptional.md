@@ -1,11 +1,12 @@
 ---
-path: '/blog/11/26/2021/java-optional-venting'
+path: '/blog/11/26/2021/venting-java-optional'
 date: 2021-11-26
 title: Venting - Java's Optional
 tags: ['optional', 'programming languages', 'java']
 ---
 
 After reading Matt's [tip for academic blogging](https://matt.might.net/articles/how-to-blog-as-an-academic/), I decided to hop on tip 4, _Vented steam as post_, and focus my concerns around the design of Java's _Optional_ type and the capacity for misuse from junior/inexperienced Java engineers. A quick Google search for _Optional_ misuse will render countless results. What many of these articles miss is an illustration of the common bad practices, so as a visual learner myself, I wanted to show in code what happens when you give a baby a knife. These are all examples I've seen used in production and introduced in merge requests by fairly intelligent CS graduates:
+git commit
 
 ### 1. Null-checking
 
