@@ -82,7 +82,7 @@ if (myOptional.isPresent()) {
 }
 ```
 
-This one is a little bit trickier, and I always see it in production and in merge requests, but I don't tend to get as tufted. Logically, it makes sense; you're doing the due diligence to check if your value is present, and if so, you retrieve it. Instead, understand your domain, and decide when it is best to [return a default value](https://www.youtube.com/watch?v=29MAL8pJImQ) or throw an exception:
+This one is a little bit trickier, and I always see it in production and in merge requests, but I don't tend to get as tufted ([or not as tufted as Brian Goetz](https://stackoverflow.com/questions/26327957/should-java-8-getters-return-optional-type/26328555#26328555)). Logically, it makes sense; you're doing the due diligence to check if your value is present, and if so, you retrieve it. Instead, understand your domain, and decide when it is best to [return a default value](https://www.youtube.com/watch?v=29MAL8pJImQ) or throw an exception:
 
 ```java
 var val = extremelyHelpfulMethod(arg).orElseThrow(() -> new FieldNotFound());
